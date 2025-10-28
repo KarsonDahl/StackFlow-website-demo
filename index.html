@@ -5,25 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stack Overflow</title>
-    <link rel="icon" href="lil_images/stare.png" type="image/png">
+    <link rel="icon" href="images/icon.jpg" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
     <div class="container">
         <div class="title">Stack Overflow</div>
-        <img id="homescreen" style="padding-bottom: 15px" src="https://placehold.co/400" alt="Story Image" />
-        <a href="#" class="start-button" onclick="startGame()">Start Exploring</a>
+        <a href="#" class="start-button" onclick="createPost()">Start Scrolling</a>
 
-        <div class="game-container" id="game-container">
-            <div class="story-text" id="story-text"></div>
-            <div class="image-container">
-                <img id="story-image" src="https://placehold.co/500" alt="Story Image" />
-            </div>
-            <div class="choices" id="choices"></div>
-        </div>
+        <div id="feed"></div>
     </div>
-    <script type="module" src="mainQuiz.js"></script>
+    <script src="logic.js"></script>
 </body>
 
 </html>
