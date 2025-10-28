@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'Indie Flower';
+    src: url('Indie_Flower/IndieFlower-Regular.ttf') format('truetype');
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Indie Flower", serif;
+    background: #F0F0D7;
+    color: white;
+}
+
+.container {
+    width: 100vw;
+    /* full viewport width */
+    height: calc(100vw * (16 / 9));
+    /* maintain 9:16 aspect ratio */
+    max-height: 150vh;
+    /* full viewport height */
+    max-width: calc(100vh * (9 / 16));
+    padding: 20px;
+    border-radius: 10px;
+    background: #829072;
+    /* background: #e5f2d2; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* overflow-y: auto;   */
+}
+
+.title {
+    font-size: 21px;
+    margin-bottom: 3vh;
+}
+
+.start-button {
+    font-size: 21px;
+    padding: 1vh 2vw;
+    /* border: 2px solid #fcf0c0; */
+    background-color: #D0DDD0;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 3vh;
+    border-radius: 10px;
+}
+
+.start-button:hover {
+    background-color: #ddd;
+}
+
+.game-container {
+    display: none;
+    margin-top: 10%;
+    overflow: auto;
+}
+
+.choices {
+
+    display: flex;
+    flex-direction: column;
+    /* Arrange buttons in a column */
+    align-items: center;
+    /* Center the buttons horizontally */
+    gap: 10px;
+    /* Space between the buttons */
+    margin-top: 2rem;
+    /* Space above the choices container */
+}
+
+.choice-button {
+    font-family: "Indie Flower", serif;
+    font-size: 18px;
+    /* Adjust font size to be smaller */
+    padding: 1vh 1vw;
+    /* Adjust padding based on viewport height and width */
+    border: 0.5px solid #f2d79e;
+    /* Solid border */
+    background-color: #f6e9bd;
+    /* White background */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Smooth transitions */
+}
+
+/*
+colors:
+    beige: #F0F0D7,
+    light teal: #D0DDD0,
+    light green: #AAB99A,
+    dark green: #727D73
+*/
