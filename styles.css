@@ -10,8 +10,8 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Indie Flower", serif;
-    background: #F0F0D7;
+    font-family: "Roboto", sans-serif;
+    background: #7a7a73;
     color: white;
 }
 
@@ -20,12 +20,12 @@ html {
     /* full viewport width */
     height: calc(100vw * (16 / 9));
     /* maintain 9:16 aspect ratio */
-    max-height: 150vh;
+    max-height: 40vh;
     /* full viewport height */
     max-width: calc(100vh * (9 / 16));
     padding: 20px;
-    border-radius: 10px;
-    background: #829072;
+    border-radius: 30px;
+    background: #5a5e56;
     /* background: #e5f2d2; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -43,13 +43,14 @@ html {
 
 .start-button {
     font-size: 21px;
+    font-family: "Comic Sans MS", serif;
     padding: 1vh 2vw;
     /* border: 2px solid #fcf0c0; */
-    background-color: #D0DDD0;
+    background-color: #cccccc;
     cursor: pointer;
     text-decoration: none;
-    margin-bottom: 3vh;
-    border-radius: 10px;
+    margin-bottom: 1dvb;
+    border-radius: 30px;
 }
 
 .start-button:hover {
