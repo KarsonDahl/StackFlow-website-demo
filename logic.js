@@ -45,7 +45,7 @@ async function fetchPosts(numberOfPosts) {
 }
 
 // --- Initial load ---
-fetchPosts(2);
+fetchPosts(1);
 
 // --- Infinite scroll only ---
 feed.addEventListener("scroll", () => {
@@ -54,9 +54,4 @@ feed.addEventListener("scroll", () => {
     }
 
 });
-feed.addEventListener("scroll", () => {
-    if (feed.scrollTop + feed.clientHeight >= feed.scrollHeight + 100) {
-        if (loadingIndicator.style.display === "none") fetchPosts(1);
-    }
-
-});
+// Note: Adjusted scroll threshold to 80px for better UX

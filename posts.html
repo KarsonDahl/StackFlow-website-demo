@@ -4,13 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stack Overflow Feed</title>
+    <title>Explore StateFlow</title>
     <link rel="stylesheet" href="scroll.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-
-    <div class="container">
+    <div class="drawer">
+        <input id="my-drawer-1" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content">
+            <!-- Page content here -->
+            <label for="my-drawer-1"
+                class="btn drawer-button text-neutral-content border-none shadow-none fixed z-5 bg-neutral  m-3 p-3">☰
+            </label>
+        </div>
+        <div class="drawer-side">
+            <label for="my-drawer-1" aria-label="close sidebar" class="drawer-overlay"></label>
+            <ul class="menu bg-neutral min-h-full w-80 p-4">
+                <!-- Sidebar content here -->
+                <li><a href="index.html">Return to Homepage</a></li>
+                <li><a>Start new state</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container relative h-screen">
         <div id="feed"></div>
         <div id="loading">Loading...</div>
     </div>
