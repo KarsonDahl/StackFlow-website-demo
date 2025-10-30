@@ -23,10 +23,12 @@ function createPost(postData) {
     }
 }
 
+let offset = 0;
 // --- Function to fetch data from API ---
 async function fetchPosts(numberOfPosts) {
-    const apiUrl = `http://localhost:3000/api/posts?limit=${numberOfPosts}`;
+    const apiUrl = `http://localhost:3000/api/posts?limit=${numberOfPosts}&offset=${offset}`;
 
+    offset += numberOfPosts;
     loadingIndicator.style.display = 'block';
 
     try {
