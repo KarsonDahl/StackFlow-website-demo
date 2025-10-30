@@ -25,13 +25,24 @@
             <ul class="menu bg-neutral min-h-full w-80 p-4">
                 <!-- Sidebar content here -->
                 <li><a href="index.html">Return to Homepage</a></li>
-                <li><a>Start new state</a></li>
+                <li>
+                    <details class="dropdown">
+                        <summary class="btn text-neutral-content border-none shadow-none bg-neutral"><a>Start new
+                                state</a>
+                        </summary>
+                        <ul class="menu dropdown-content bg-base-2 rounded-box z-1 w-52 p-2 shadow-sm">
+                            <li><a href="/">Insert Topic</a></li>
+                            <li><a href="/">AI-curated Topic</a></li>
+                        </ul>
+                    </details>
+
+                </li>
             </ul>
         </div>
     </div>
     <div class="container relative h-screen">
         <div id="feed"></div>
-        <div id="loading">Loading...</div>
+        <div id="loading" class="animate-pulse">Loading...</div>
     </div>
     <script src="logic.js"></script>
 </body>
