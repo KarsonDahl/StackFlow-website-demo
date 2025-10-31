@@ -1,4 +1,5 @@
 let postCount = 0;
+let offset = 0;
 const params = new URLSearchParams(window.location.search);
 const topic = params.get("topic") || "travel"; // default topic
 
@@ -36,22 +37,22 @@ function createPost(postData) {
         feed.removeChild(feed.firstChild);
     }
 }
-
-let offset = 0;
 // --- Function to fetch data from API ---
 async function fetchPosts(numberOfPosts) {
     const apiUrl = `http://localhost:3000/api/posts?topic=${topic}&limit=${numberOfPosts}&offset=${offset}`;
 
-    offset += numberOfPosts;
     loadingIndicator.style.display = 'block';
 
     try {
         const response = await fetch(apiUrl);
-        const postsData = await response.json();
+        const { posts, total } = await response.json();
 
-        postsData.forEach((numberOfPosts) => {
-            createPost(numberOfPosts);
-        });
+        posts.forEach((post) => createPost(post));
+        offset += numberOfPosts;
+
+        if (offset >= total) {  // loop reset
+            offset = 0;      // reset for loop
+        }
 
     } catch (error) {
         console.error("Could not fetch posts:", error);
@@ -59,7 +60,6 @@ async function fetchPosts(numberOfPosts) {
         loadingIndicator.style.display = 'none';
     }
 }
-
 // --- Initial load ---
 fetchPosts(1);
 
