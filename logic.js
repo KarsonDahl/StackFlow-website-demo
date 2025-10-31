@@ -1,15 +1,29 @@
 let postCount = 0;
+const params = new URLSearchParams(window.location.search);
+const topic = params.get("topic") || "travel"; // default topic
+
 const feed = document.getElementById("feed");
 const loadingIndicator = document.getElementById("loading"); // Use the loading element
 const MAX_FEED_POSTS = 2; // max posts in feed
 
 // --- Function to create a single post from received data ---
+function setTopicBackground(topicName) {
+    const imageUrl = `images/${topicName}.jpg`; // topic-named image
+    document.body.style.backgroundImage = `url('${imageUrl}')`;
+    document.body.style.backgroundSize = "cover";
+    document.body.style.height = "100vh";               // ensure full viewport height
+
+    document.body.style.backgroundPosition = "center";
+}
+setTopicBackground(topic);
+
 function createPost(postData) {
     postCount++;
     const post = document.createElement("div");
     post.className = "post";
 
-    post.textContent = `Post #${postCount}: ${postData.content}`;
+    post.textContent = ` ${postData.content}`;
+
 
     const link = document.createElement("a");
     link.href = postData.link;
@@ -26,7 +40,7 @@ function createPost(postData) {
 let offset = 0;
 // --- Function to fetch data from API ---
 async function fetchPosts(numberOfPosts) {
-    const apiUrl = `http://localhost:3000/api/posts?limit=${numberOfPosts}&offset=${offset}`;
+    const apiUrl = `http://localhost:3000/api/posts?topic=${topic}&limit=${numberOfPosts}&offset=${offset}`;
 
     offset += numberOfPosts;
     loadingIndicator.style.display = 'block';
