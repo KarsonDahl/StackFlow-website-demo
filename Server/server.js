@@ -107,7 +107,7 @@ const server = http.createServer((req, res) => {
 
             // Send the JSON response
             res.writeHead(200, { 'Content-Type': 'application/json' });
-            res.end(JSON.stringify(posts));
+            res.end(JSON.stringify({ posts, total: data.length }));
 
         }, 500); // 500ms delay
 
