@@ -2,8 +2,10 @@ body,
 html {
     margin: 0;
     padding: 0;
-    background: url('images/backgroundA.gif');
+    background: #000;
     background-size: cover;
+    /* ensures smooth scaling */
+
     font-family: "Roboto", sans-serif;
     color: white;
 }

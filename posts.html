@@ -31,8 +31,8 @@
                                 state</a>
                         </summary>
                         <ul class="menu dropdown-content bg-base-2 rounded-box z-1 w-52 p-2 shadow-sm">
-                            <li><a href="/">Insert Topic</a></li>
-                            <li><a href="/">AI-curated Topic</a></li>
+                            <li><textarea class="textarea bg-neutral" placeholder="Insert Topic"></textarea></li>
+                            <li><a href="/posts.html">AI-curated Topic</a></li>
                         </ul>
                     </details>
 
@@ -44,7 +44,40 @@
         <div id="feed"></div>
         <div id="loading" class="animate-pulse">Loading...</div>
     </div>
+
+
     <script src="logic.js"></script>
+    <div class="fab">
+        <!-- a focusable div with tabindex is necessary to work on all browsers. role="button" is necessary for accessibility -->
+        <div tabindex="0" role="button" class="btn btn-lg btn-circle btn-secondary">
+            <svg aria-label="New" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+        </div>
+
+        <!-- buttons that show up when FAB is open -->
+        <button class="btn btn-lg btn-circle">
+            <a href="posts.html?topic=books"><img src="images/booksIcon.png"></a>
+        </button>
+        <button class="btn btn-lg btn-circle bg-neutral">
+            <a href="posts.html?topic=technology" class="btn btn-lg btn-circle"><img
+                    src="images/technologyIcon.png"></a>
+        </button>
+        <button class="btn btn-lg btn-circle">
+            <a href="posts.html?topic=videoGames" class="btn btn-lg btn-circle"><img
+                    src="images/videoGamesIcon.png"></a>
+        </button>
+        <button class="btn btn-lg btn-circle">
+            <a href="posts.html?topic=art" class="btn btn-lg btn-circle"><img src="images/artIcon.png"></a>
+        </button>
+        <button class="btn btn-lg btn-circle">
+            <a href="posts.html?topic=cars" class="btn btn-lg btn-circle"><img src="images/carsIcon.png"></a>
+        </button>
+        <button class="btn btn-lg btn-circle">
+            <a href="posts.html?topic=travel" class="btn btn-lg btn-circle"><img src="images/travelIcon.png"></a>
+        </button>
+    </div>
 </body>
 
 </html>
