@@ -1,7 +1,7 @@
 // --- 1. Dependencies and Setup ---
 const http = require('http');
 const url = require('url');
-const PORT = 3000; // The port your frontend will connect to
+const PORT = 3001; // The port your frontend will connect to
 
 // --- Topic arrays ---
 const TOPIC1_VIDEO_DATA = [
