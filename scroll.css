@@ -41,6 +41,8 @@ html {
     gap: 20px;
     /* more spacing between posts */
     padding: 10px;
+    scrollbar-color: #5a5e56 transparent;
+    scrollbar-width: none
 }
 
 .post {

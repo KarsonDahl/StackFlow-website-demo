@@ -24,11 +24,11 @@ function createPost(postData) {
     post.className = "post";
 
     post.textContent = ` ${postData.content}`;
-
+    // if backend changes, this will need to be updated to match the new structure of the data
 
     const link = document.createElement("a");
     link.href = postData.link;
-    link.textContent = "Read more";
+    link.textContent = "Read more"; // this too
     post.appendChild(link);
     feed.appendChild(post);
 
