@@ -59,12 +59,12 @@ const TOPIC6_VIDEO_DATA = [
 ];
 
 const topics = {
-    Books: TOPIC1_VIDEO_DATA,
-    Technology: TOPIC2_VIDEO_DATA,
-    VideoGames: TOPIC3_VIDEO_DATA,
-    Art: TOPIC4_VIDEO_DATA,
-    Cars: TOPIC5_VIDEO_DATA,
-    Travel: TOPIC6_VIDEO_DATA
+    books: TOPIC1_VIDEO_DATA,
+    technology: TOPIC2_VIDEO_DATA,
+    videoGames: TOPIC3_VIDEO_DATA,
+    art: TOPIC4_VIDEO_DATA,
+    cars: TOPIC5_VIDEO_DATA,
+    travel: TOPIC6_VIDEO_DATA
 };
 
 // --- 3. Server Logic (Request Listener) ---
