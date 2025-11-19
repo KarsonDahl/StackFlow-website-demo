@@ -1,7 +1,7 @@
 // --- 1. Dependencies and Setup ---
 const http = require('http');
 const url = require('url');
-const PORT = 3001; // The port your frontend will connect to
+const PORT = 3000; // The port your frontend will connect to
 
 // --- Topic arrays ---
 const TOPIC1_VIDEO_DATA = [
@@ -120,6 +120,6 @@ const server = http.createServer((req, res) => {
 
 // --- 4. Start the Server ---
 server.listen(PORT, () => {
-    console.log(`\n🎉 Mock API server running at http://localhost:${PORT}`);
+    console.log(`\nMock API server running at http://localhost:${PORT}`);
     console.log(`Ready to handle requests from your frontend 'logic.js' file.`);
 });
